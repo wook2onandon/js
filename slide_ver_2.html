@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" type="text/css" href="css/destyle.css">
+
+  <style>
+    .slide_container {
+      width: 60vw;
+      height: 40vh;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .myslide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: brown;
+      background-size: cover;
+      background-position: center;
+      display: none;
+    }
+
+    .myslide:first-child {
+      display: block;
+    }
+
+    .button_next {
+      position: absolute;
+      top: 50%;
+      right: 2%;
+      color: white;
+    }
+
+    .button_prev {
+      position: absolute;
+      top: 50%;
+      left: 2%;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+    <div class="slide_container">
+      <div class="myslide">Slide 1</div>
+      <div class="myslide">Slide 2</div>
+      <div class="myslide">Slide 3</div>
+      <div class="myslide">Slide 4</div>
+      <a class="button_prev" onclick="slidePrev()">Prev</a>
+      <a class="button_next" onclick="slideNext()">Next</a>
+      
+    </div>
+  
+  <script>
+
+    var slideIndex = 1; // 현재 슬라이드의 넘버
+    var mySlide = document.getElementsByClassName('myslide');
+    
+
+    function slidePrev() {
+
+      for (i=0 ; i<4 ; i++) {
+        mySlide[i].style.display="none"
+        }
+
+      if (slideIndex == 4) {
+        mySlide[2].style.display="block";
+        slideIndex = 3;
+      }
+
+      else if (slideIndex == 3) {
+
+        mySlide[1].style.display="block";
+        slideIndex = 2;
+      }
+
+      else if (slideIndex == 2) {
+
+        mySlide[0].style.display="block";
+        slideIndex = 1;
+      }
+
+      else if (slideIndex == 1) {
+      mySlide[3].style.display="block";
+      slideIndex = 4;
+      }
+    }
+
+
+
+    function slideNext() {
+
+      for (i=0 ; i<4 ; i++) {
+        mySlide[i].style.display="none"
+        }
+
+      if (slideIndex == 1) {
+        
+        mySlide[1].style.display="block";
+        slideIndex = 2;
+      }
+
+      else if (slideIndex == 2) {
+      
+        mySlide[2].style.display="block";
+        slideIndex = 3;
+      }
+
+      else if (slideIndex == 3) {
+      
+        mySlide[3].style.display="block";
+        slideIndex = 4;
+      }
+
+      else if (slideIndex == 4) {
+      mySlide[0].style.display="block";
+      slideIndex = 1;
+      }
+    }
+
+  </script>
+</body>
+</html>

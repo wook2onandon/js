@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/destyle.css">
+  <style>
+
+    h1{
+      font-size: 48px;
+      text-align: center;
+      line-height: 60px;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+      line-height: 24px;
+    }
+
+    .card_4column {
+      width: 100%;
+      height: auto;
+      display: flex;
+      color: white;
+      padding: 0 6px;
+    }
+    
+    .card_4column li {
+      width: calc(50% - 12px);
+      box-sizing: border-box;
+      background-color: #b3b3b3;
+      position: relative;
+      margin: 20px 6px;
+    }
+
+    .card_4column img {
+      width: 100%;
+    }
+
+    .card_4column h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 24px;
+      position: absolute;
+      bottom: 80px;
+      left: 20px;
+    }
+
+    .card_4column p {
+      text-align: center;
+      position: absolute;
+      bottom: 60px;
+      left: 20px;
+      word-break: keep-all;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .card_4column li {
+        
+      }
+      
+      .card_4column {
+
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .card_4column li {
+        width: 100%;
+      }
+
+      .card_4column {
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .span_br {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>미디어쿼리를 이용한 반응형 웹</h1>
+  <p>화면의 넓이가 1024보다 클 경우에는 4단 컬럼,<span class="span_br"> 1024 이하일 때는 2단 컬럼, 600보다 작을 때는 1단 컬럼 실습</span></p>
+  <ul class="card_4column">
+    <li>
+      <img src="../hugeinc/img/Nike_work_thumbnail1__1_.jpg">
+      <h2>Column 1</h2>
+      <p>Some text ...</p>
+    </li>
+
+    <li><img src="../hugeinc/img/Thumbnail2.jpg">
+      <h2>Column 2</h2>
+      <p>Some text ...</p>
+    </li>
+  </ul>
+</body>
+</html>

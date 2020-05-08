@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        position: relative;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+
+      .red {
+        background-color: red;
+        width: 10px;
+        height: 50px;
+        border-radius: 10%;
+        animation-name: clock;
+        animation-duration: 43200s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform: translate(50% 100%);
+        position: absolute;
+        top: 50px;
+        left: calc(50% - 5px);
+      }
+
+      .green {
+        background-color: green;
+        width: 10px;
+        height: 80px;
+        border-radius: 10%;
+        animation-name: clock;
+        animation-duration: 3600s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform: translate(50% 100%);
+        position: absolute;
+        top: 20px;
+        left: calc(50% - 5px);
+      }
+
+      .blue {
+        background-color: blue;
+        width: 10px;
+        height: 80px;
+        border-radius: 10%;
+        animation-name: clock;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        position: absolute;
+        top: 20px;
+        left: calc(50% - 5px);
+      }
+
+      @keyframes clock {
+        from {
+          transform-origin: bottom;
+          transform: rotate(0);
+        }
+        to {
+          transform-origin: bottom;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </div>
+  </body>
+</html>
