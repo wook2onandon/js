@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      width: 600px;
+      height: 600px;
+      position: relative;
+      background-color: chartreuse;
+    }
+
+    #title {
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      background-color: crimson;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+    <h1 id="title">hello world!</h1>
+  </div>
+
+  <script>
+    var id = setInterval(myAnimate, 300);
+    var moveThing = document.getElementById("title");
+    var x = 0;
+    var y = 0;
+
+    function myAnimate() {
+      x = Math.random() * 600;
+      y = Math.random() * 600;
+      moveThing.style.top = y + "px";
+      moveThing.style.left = x + "px";
+
+    }
+
+  </script>
+</body>
+
+</html>

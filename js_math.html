@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="pi1"></p>
+  <p id="pi2"></p>
+  <br>
+  <p id="round"></p>
+  <br>
+  <p id="pow"></p>
+  <br>
+  <p id="ceil"></p>
+  <p id="floor"></p>
+  <br>
+  <p id="max"></p>
+  <p id="min"></p>
+  <p id="random"></p>
+  <p id="random2"></p>
+  <p id="abs"></p>
+
+  <script>
+    document.getElementById("pi1").innerHTML = "반지름이 10인 원의 둘레의 길이는? : " + 2 * Math.PI * 10 + "cm"; //원주율
+    document.getElementById("pi2").innerHTML = "반지름이 10인 원의 넓이는? : " + Math.PI * 10 * 10 + "cm2";
+
+    document.getElementById("round").innerHTML = "4.7 Round? :" + Math.round(4.7); //반올림
+    document.getElementById("pow").innerHTML = "Math.pow : " + Math.pow(2, 2);  //제곱
+
+    var maxArray = (5, 10, 20, 50, 300)
+    document.getElementById("max").innerHTML = "max? : " + Math.max(maxArray); //가장 큰 수
+    document.getElementById("min").innerHTML = "min? : " + Math.min(5, 10, 20, 50, 300);  //가장 작은 수
+    document.getElementById("random").innerHTML = "random? : " + (Math.floor(Math.random() * 10) + 1);  //랜덤 0~1 사이의 수
+
+    function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    document.getElementById("random2").innerHTML = "Random Function? : " + getRndInteger(2, 100);
+
+    document.getElementById("abs").innerHTML = "abs? : " + Math.abs(-70); //양의 정수로 변환
+  </script>
+</body>
+
+</html>
