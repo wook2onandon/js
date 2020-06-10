@@ -14,15 +14,18 @@
   <p id="result4"></p>
   <p id="result5"></p>
   <p id="result6"></p>
+  <p id="result7"></p>
   <script>
-    var windowX = window.innerWidth;
+    /*var windowX = window.innerWidth;
     var windowY = window.innerHeight;
 
-    var windowXx = screen.Width;
+    var windowXx = screen.width;
     var windowYy = screen.height;
 
     var windowXxx = screen.availWidth;
     var windowYyy = screen.availHeight;
+
+    var windowColor = screen.colorDepth;
 
     document.getElementById("result1").innerHTML = "window width is : " + windowX;
     document.getElementById("result2").innerHTML = "window height is : " + windowY;
@@ -32,6 +35,16 @@
 
     document.getElementById("result5").innerHTML = "screen availwidth is : " + windowXxx;
     document.getElementById("result6").innerHTML = "screen availheight is : " + windowYyy;
+
+    document.getElementById("result7").innerHTML = "screen Color Depth is : " + windowColor;
+    */
+
+    var windowHref = window.location.href;
+    var windowHost = window.location.hostname;
+    document.getElementById("result1").innerHTML = windowHref;
+    document.getElementById("result2").innerHTML = windowHost;
+
+
   </script>
 </body>
 
