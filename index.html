@@ -41,8 +41,15 @@
 
     var windowHref = window.location.href;
     var windowHost = window.location.hostname;
+    var windowPath = window.location.pathname;
+    var windowProto = window.location.protocol;
+    var windowPort = window.location.port;
+
     document.getElementById("result1").innerHTML = windowHref;
     document.getElementById("result2").innerHTML = windowHost;
+    document.getElementById("result3").innerHTML = windowPath;
+    document.getElementById("result4").innerHTML = windowProto;
+    document.getElementById("result5").innerHTML = windowPort;
 
 
   </script>
