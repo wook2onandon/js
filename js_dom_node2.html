@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="div1">TEXT 1
+    <h1 id="h1">Hello</h1>
+    <h2>JS Node 1</h2>
+    <p>노드간의 관계를 탐색하다 1</p>
+    <p>노드간의 관계를 탐색하다 11</p>
+    <p>노드간의 관계를 탐색하다 111</p>
+  </div>
+
+  <div id="div2">TEXT 2
+    <h1 id="h2">World</h1>
+    <h2>JS Node 2</h2>
+    <p>노드간의 관계를 탐색하다 2</p>
+    <p>노드간의 관계를 탐색하다 22</p>
+    <p>노드간의 관계를 탐색하다 222</p>
+  </div>
+
+  <script>
+    document.getElementById("h1").parentElement.style = "background-color:red;"
+    document.getElementById("h1").parentNode.style = "background-color:yellow;"
+    document.getElementById("h2").parentNode.style = "background-color:green;"
+    document.getElementById("h2").nextElementSibling.style = "color:red;"
+    document.getElementById("div2").children[2].previousElementSibling.style = "color:blue;"
+    //document.getElementById("div2").children[2].remove();
+
+    //document.getElementById("div2").children[0].style = "color:blue;"
+
+
+    console.log(document.getElementById("div2").childNodes[1].nodeName);
+    console.log(document.getElementById("h2").firstChild.nodeValue);
+    console.log(document.getElementById("h2").childNodes[0].nodeValue);
+
+    console.log(document.querySelectorAll("p").length);
+  </script>
+</body>
+
+</html>

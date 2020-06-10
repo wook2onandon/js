@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="div1">
+    <h1 id="demo">HELLO.</h1>
+    <p id="result">World</p>
+
+  </div>
+  <script>
+    // var myTitle = document.getElementById("demo").innerHTML;
+
+    // var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
+    // document.getElementById("result").innerHTML = myTitle;
+
+    var para = document.createElement("p");
+    var node = document.createTextNode("This is New.");
+    para.appendChild(node);
+
+    //document.getElementById("div1").insertBefore(para, document.getElementById("result"));
+
+    // document.getElementById("div1").removeChild(document.getElementById("div1").childNodes[1]);
+
+    var element = document.getElementById("div1");
+    element.replaceChild(para, document.getElementById("result"));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="result1"></p>
+  <p id="result2"></p>
+  <p id="result3"></p>
+  <p id="result4"></p>
+  <p id="result5"></p>
+  <p id="result6"></p>
+  <script>
+    var windowX = window.innerWidth;
+    var windowY = window.innerHeight;
+
+    var windowXx = screen.Width;
+    var windowYy = screen.height;
+
+    var windowXxx = screen.availWidth;
+    var windowYyy = screen.availHeight;
+
+    document.getElementById("result1").innerHTML = "window width is : " + windowX;
+    document.getElementById("result2").innerHTML = "window height is : " + windowY;
+
+    document.getElementById("result3").innerHTML = "screen width is : " + windowXx;
+    document.getElementById("result4").innerHTML = "screen height is : " + windowYy;
+
+    document.getElementById("result5").innerHTML = "screen availwidth is : " + windowXxx;
+    document.getElementById("result6").innerHTML = "screen availheight is : " + windowYyy;
+  </script>
+</body>
+
+</html>
