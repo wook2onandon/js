@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="result"></p>
+  <script>
+    document.cookie = "username=;";
+    document.cookie = "gender=male";
+    document.cookie = "age=20";
+    var x = document.cookie;
+    document.getElementById("result").innerHTML = getCookie("username");
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(";");
+      for (i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == "") { c = c.substring(1); }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+        return "";
+      }
+    }
+  </script>
+</body>
+
+</html>
